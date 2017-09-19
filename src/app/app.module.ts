@@ -7,6 +7,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent }     from './heroes.component';
 import { HeroService }         from './hero.service';
 
+import { DashboardComponent }     from './dashboard.component';
 import { RouterModule }   from '@angular/router';
 
 
@@ -18,6 +19,23 @@ import { RouterModule }   from '@angular/router';
       {
         path: 'heroes',
         component: HeroesComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
 ])
   ],
@@ -25,6 +43,7 @@ import { RouterModule }   from '@angular/router';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
+    DashboardComponent
 
   ],
   providers: [
